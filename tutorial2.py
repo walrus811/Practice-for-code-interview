@@ -48,6 +48,7 @@ result = list(permutations(data, 2))
 print(result)
 
 ### combinations(iterable에서 r개의 데이터를 순서를 고려하지 않고 뽑아 나열하는 모든 경우(조합)를 계산)
+#### - premutation에서 순서를 생각했기에 중복되는 만큼(r!)을 제거한다.
 from itertools import combinations
 
 result = list(combinations(data, 2))
@@ -60,10 +61,11 @@ result = list(product(data, repeat=2))
 print(result)
 
 ### combinations_with_replacement(combinations + 중복 허용)
+### 칸막이와 원
 from itertools import combinations_with_replacement
 
 result = list(combinations_with_replacement(data, 2))
-print(data)
+print(result)
 
 ## heapq(PriorityQueue보다 빠름, 최소 힙, 삽입 시 O(NlogN)으로 오름차순 정렬 완료, 가장 위가 제일 작은 원소)
 import heapq
